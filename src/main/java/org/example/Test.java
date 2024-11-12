@@ -1,10 +1,27 @@
 package org.example;
 
 
+import java.util.Scanner;
+
 public class Test {
 //    psvm or main
     public static void main(String[] args) {
 
+
+        int minAge = 18;
+        int currentAge = 34;
+
+        if(currentAge>minAge){
+            System.out.println("Okay");
+        }else System.out.println("UariaTqvenze");
+
+//        kkk(18);
+//        thirdLec();
+        levanisEx();
+    }
+
+
+    public static void firstLec(){
         byte customerAge = 127;
         short salary = 32767;
         int salaryBig = 2147483647;
@@ -52,18 +69,9 @@ public class Test {
         System.out.println(Math.abs(-82));
         System.out.println((int)(Math.random()*100));
 
-        int minAge = 18;
-        int currentAge = 34;
-
-        if(currentAge>minAge){
-            System.out.println("Okay");
-        }else System.out.println("UariaTqvenze");
-
-        kkk(18);
     }
 
-
-    public static void kkk(int currentAge){
+    public static void secondLec(int currentAge){
 
 //        6-18 skola
 //        19-24 student
@@ -93,6 +101,82 @@ public class Test {
 
     }
 
+    public static void thirdLec(){
+
+//        for (int i=0; i<10; i++){
+//            if (i%5==0){
+//                continue;
+//            }
+//            System.out.println("Test" + i);
+//        }
 
 
+        for (int i=0; i<10; i++){
+            if (i!=0 && i%5==0){
+                break;
+            }
+            System.out.println("Test" + i);
+        }
+
+//        for (int i=0; i<3; i++){
+//            System.out.println("Test_I = " + i);
+//
+//            for (int j=0; j<5; j++){
+//                System.out.println("    TestFor_J = " + j);
+//            }
+//        }
+
+        int i = 0;
+        while(i<5){
+            if(i==3)break;
+            System.out.println(i);
+            i++;
+
+        }
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Number: ");
+//        int number = scanner.nextInt();
+//
+//        while (number!=0){
+//            System.out.println("Your num: " + number);
+//            number = scanner.nextInt();
+//        }
+
+
+        double[] list = {3,4,4.4,2,3,2};
+
+        for(int iii = 0; iii<list.length;iii++){
+            System.out.println(list[iii]);
+        }
+
+        String[] strings = {"K1","K2","K3","K4"};
+
+        strings[1] = "KK";
+
+        for (int l=0; l<strings.length;l++){
+            System.out.println(strings[l]);
+        }
+
+    }
+
+    public static void levanisEx(){
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("გარეთ ატლასი შიგნით ათასი. \nრა არის?: ");
+        String answer = scanner.next();
+
+
+        while (!answer.equals("ბროწეული")){
+            if (answer.equals("broweuli")){
+                break;
+            }
+            System.out.println("პასუხი არ არის სწორი!\n");
+            System.out.print("გარეთ ატლასი შიგნით ათასი. \nრა არის?: ");
+
+            answer = scanner.next();
+        }
+        System.out.println("პასუხი სწორია <3");
+    }
 }
